@@ -91,7 +91,7 @@ public class BigRoomServiceImpl extends ICommServiceImpl implements BigRoomServi
 
 			// 获取当前主播有多少人在房间中
 			Map<String, Object> viewerM = this.getMap("SELECT COUNT(t_id) AS viewer FROM t_big_room_viewer WHERE t_big_room_id = ?",
-					(userId+10000)*100);
+					(anchorId+10000)*100);
 
 			map.put("viewer", viewerM.get("viewer"));
 
